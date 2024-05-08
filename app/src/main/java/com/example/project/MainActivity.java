@@ -8,10 +8,17 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener {
+
+    private final String JSON_URL = "https://mobprog.webug.se/json-api?login=a23jonam";
+
+    private ArrayList<RecyclerViewItem> items = new ArrayList<>();
+    private RecyclerViewAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,13 +27,13 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        ArrayList<RecyclerViewItem> items = new ArrayList<>(Arrays.asList(
+        items = new ArrayList<>(Arrays.asList(
                 new RecyclerViewItem("Matterhorn"),
                 new RecyclerViewItem("Mont Blanc"),
                 new RecyclerViewItem("Denali")
         ));
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, items, new RecyclerViewAdapter.OnClickListener() {
+        adapter = new RecyclerViewAdapter(this, items, new RecyclerViewAdapter.OnClickListener() {
             @Override
             public void onClick(RecyclerViewItem item) {
                 Toast.makeText(MainActivity.this, item.getTitle(), Toast.LENGTH_SHORT).show();
@@ -37,7 +44,18 @@ public class MainActivity extends AppCompatActivity {
         view.setLayoutManager(new LinearLayoutManager(this));
         view.setAdapter(adapter);
 
+        new JsonTask(this).execute(JSON_URL);
 
+
+    }
+
+    @Override
+    public void onPostExecute(String json) {
+        Gson gson = new Gson();
+
+        adapter.updateData(items);
+
+        adapter.notifyDataSetChanged();
     }
 
 }
