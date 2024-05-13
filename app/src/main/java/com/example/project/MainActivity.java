@@ -42,8 +42,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
                 new RecyclerViewItem("Denali")
         ));
 
-        //new JsonTask(this).execute(JSON_URL);
-        new JsonFile(this, this).execute(JSON_FILE);
+
 
         adapter = new RecyclerViewAdapter(this, items, new RecyclerViewAdapter.OnClickListener() {
             @Override
@@ -56,7 +55,8 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         view.setLayoutManager(new LinearLayoutManager(this));
         view.setAdapter(adapter);
 
-
+        //new JsonTask(this).execute(JSON_URL);
+        new JsonFile(this, this).execute(JSON_FILE);
     }
 
     @Override
@@ -67,9 +67,12 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         }
 
         Type type = new TypeToken<ArrayList<RecyclerViewItem>>() {}.getType();
-        items = gson.fromJson(json, type);
+        ArrayList<RecyclerViewItem> newItems = gson.fromJson(json, type);
 
-       //adapter.updateData(items);
+        for(RecyclerViewItem r : newItems) {
+            Log.d("svamp1", r.getTitle() + "");
+        }
+       adapter.updateData(newItems);
 
     }
 
