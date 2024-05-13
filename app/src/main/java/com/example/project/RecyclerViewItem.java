@@ -10,10 +10,10 @@ public class RecyclerViewItem {
     private String title;
 
     @SerializedName("company")
-    private String orderOfFungi;
+    private String scientificName;
 
     @SerializedName("location")
-    private String colorPattern;
+    private String orderOfFungi;
 
     @SerializedName("category")
     private String culinaryStatus;
@@ -24,20 +24,18 @@ public class RecyclerViewItem {
     @SerializedName("cost")
     private int widthInCentimeters;
 
-    public RecyclerViewItem(String title) {
-        this.title = title;
-    }
+    @SerializedName("auxdata")
+    private String colorPattern;
 
     public String getTitle() {
         return title;
     }
+    public String getScientificName() {
+        return scientificName;
+    }
 
     public String getOrderOfFungi() {
         return orderOfFungi;
-    }
-
-    public String getColorPattern() {
-        return colorPattern;
     }
 
     public String getCulinaryStatus() {
@@ -52,15 +50,26 @@ public class RecyclerViewItem {
         return widthInCentimeters;
     }
 
+    public String getColorPattern() {
+        return colorPattern;
+    }
+
+    public RecyclerViewItem(String title) {
+        this.title = title;
+    }
+
     @Override
     public String toString() {
         return "RecyclerViewItem{" +
                 "title='" + title + '\'' +
+                ", scientificName='" + scientificName + '\'' +
                 ", orderOfFungi='" + orderOfFungi + '\'' +
-                ", colorPattern='" + colorPattern + '\'' +
                 ", culinaryStatus='" + culinaryStatus + '\'' +
                 ", heightInCentimeters=" + heightInCentimeters +
                 ", widthInCentimeters=" + widthInCentimeters +
+                ", colorPattern='" + colorPattern + '\'' +
                 '}';
     }
 }
+
+
