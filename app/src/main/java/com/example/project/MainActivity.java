@@ -1,6 +1,7 @@
 package com.example.project;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,8 +20,11 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener {
 
     private final String JSON_URL = "https://mobprog.webug.se/json-api?login=a23jonam";
+    private final String JSON_FILE = "mushrooms.json";
 
-    private ArrayList<RecyclerViewItem> items = new ArrayList<>();
+    private ArrayList<RecyclerViewItem> items;
+
+    private Gson gson;
     private RecyclerViewAdapter adapter;
 
     @Override
@@ -30,13 +34,16 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        gson = new Gson();
+
         items = new ArrayList<>(Arrays.asList(
                 new RecyclerViewItem("Matterhorn"),
                 new RecyclerViewItem("Mont Blanc"),
                 new RecyclerViewItem("Denali")
         ));
 
-        new JsonTask(this).execute(JSON_URL);
+        //new JsonTask(this).execute(JSON_URL);
+        new JsonFile(this, this).execute(JSON_FILE);
 
         adapter = new RecyclerViewAdapter(this, items, new RecyclerViewAdapter.OnClickListener() {
             @Override
@@ -54,14 +61,16 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
     @Override
     public void onPostExecute(String json) {
-        Gson gson = new Gson();
+        Log.d("Json_URL","" + json);
+        for(RecyclerViewItem r : items) {
+            Log.d("svamp", r.getTitle() + "");
+        }
 
-        Type type = new TypeToken<List<RecyclerViewItem>>() {}.getType();
+        Type type = new TypeToken<ArrayList<RecyclerViewItem>>() {}.getType();
         items = gson.fromJson(json, type);
 
-        adapter.updateData(items);
+       //adapter.updateData(items);
 
-        adapter.notifyDataSetChanged();
     }
 
 }
