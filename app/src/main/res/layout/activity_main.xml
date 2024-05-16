@@ -46,8 +46,8 @@
 
     <Button
         android:id="@+id/secondActivityButton"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
         android:text="About"
         app:layout_constraintBottom_toTopOf="@id/recycler_view"
         app:layout_constraintEnd_toEndOf="parent"
