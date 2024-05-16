@@ -60,15 +60,14 @@ public class RecyclerViewItem {
 
     @Override
     public String toString() {
-        return "RecyclerViewItem{" +
-                "title='" + title + '\'' +
-                ", scientificName='" + scientificName + '\'' +
-                ", orderOfFungi='" + orderOfFungi + '\'' +
-                ", culinaryStatus='" + culinaryStatus + '\'' +
-                ", heightInCentimeters=" + heightInCentimeters +
-                ", widthInCentimeters=" + widthInCentimeters +
-                ", colorPattern='" + colorPattern + '\'' +
-                '}';
+        return "" +
+                "" + title +
+                "\nVetenskapligt namn: " + scientificName +
+                "\nOrdning: " + orderOfFungi +
+                "\n" + culinaryStatus +
+                "\nHöjd i cm: ~" + heightInCentimeters +
+                "\nBredd i cm: ~" + widthInCentimeters +
+                "\nFärg: " + colorPattern;
     }
 }
 
