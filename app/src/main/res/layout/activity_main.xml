@@ -24,15 +24,6 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!--<TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" /> -->
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
@@ -46,12 +37,16 @@
 
     <Button
         android:id="@+id/secondActivityButton"
-        android:layout_width="75dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="About"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/recycler_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/appBarLayout"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="3dp"
+        android:alpha="0.55"
+        android:background="@drawable/my_button_border"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
