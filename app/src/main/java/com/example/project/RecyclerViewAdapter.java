@@ -37,8 +37,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.scientificName.setText(items.get(position).getScientificName());
         holder.orderOfFungi.setText(items.get(position).getOrderOfFungi());
         holder.culinaryStatus.setText(items.get(position).getCulinaryStatus());
-        holder.heightInCentimeters.setText(""+items.get(position).getHeightInCentimeters());
-        holder.widthInCentimeters.setText(""+items.get(position).getWidthInCentimeters());
+        holder.heightInCentimeters.setText("Ca "+items.get(position).getHeightInCentimeters()+" cm hög");
+        holder.widthInCentimeters.setText("Ca "+items.get(position).getWidthInCentimeters()+" cm bred");
         holder.colorPattern.setText(items.get(position).getColorPattern());
         //holder.title.setText(items.get(position).toString());
     }
