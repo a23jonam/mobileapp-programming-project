@@ -34,7 +34,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.title.setText(items.get(position).getTitle());
-        holder.title.setText(items.get(position).toString());
+        holder.scientificName.setText(items.get(position).getScientificName());
+        holder.orderOfFungi.setText(items.get(position).getOrderOfFungi());
+        holder.culinaryStatus.setText(items.get(position).getCulinaryStatus());
+        holder.heightInCentimeters.setText(""+items.get(position).getHeightInCentimeters());
+        holder.widthInCentimeters.setText(""+items.get(position).getWidthInCentimeters());
+        holder.colorPattern.setText(items.get(position).getColorPattern());
+        //holder.title.setText(items.get(position).toString());
     }
 
     @Override
@@ -44,11 +50,23 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView title;
+        TextView scientificName;
+        TextView orderOfFungi;
+        TextView culinaryStatus;
+        TextView heightInCentimeters;
+        TextView widthInCentimeters;
+        TextView colorPattern;
 
         ViewHolder(View itemView) {
             super(itemView);
             itemView.setOnClickListener(this);
             title = itemView.findViewById(R.id.title);
+            scientificName = itemView.findViewById(R.id.scientificName);
+            orderOfFungi = itemView.findViewById(R.id.orderOfFungi);
+            culinaryStatus = itemView.findViewById(R.id.culinaryStatus);
+            heightInCentimeters = itemView.findViewById(R.id.heightInCentimeters);
+            widthInCentimeters = itemView.findViewById(R.id.widthInCentimeters);
+            colorPattern = itemView.findViewById(R.id.colorPattern);
         }
 
         @Override
