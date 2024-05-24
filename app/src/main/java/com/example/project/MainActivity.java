@@ -66,6 +66,8 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         view.setLayoutManager(new LinearLayoutManager(this));
         view.setAdapter(adapter);
 
+        /* JSON_URL is not able to execute when running the app from the school lab computer
+        due to a firewall, so instead we're using the data from the Json stored in a local file */
         //new JsonTask(this).execute(JSON_URL);
         new JsonFile(this, this).execute(JSON_FILE);
     }
