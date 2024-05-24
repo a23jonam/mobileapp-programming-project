@@ -40,7 +40,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.heightInCentimeters.setText("Ca "+items.get(position).getHeightInCentimeters()+" cm hög");
         holder.widthInCentimeters.setText("Ca "+items.get(position).getWidthInCentimeters()+" cm bred");
         holder.colorPattern.setText(items.get(position).getColorPattern());
-        //holder.title.setText(items.get(position).toString());
     }
 
     @Override
