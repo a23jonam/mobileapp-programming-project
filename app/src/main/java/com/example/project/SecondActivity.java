@@ -9,11 +9,11 @@ import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity {
 
-    WebView myWebView;
+    //WebView myWebView;
 
-    public void showInternalWebPage() {
+    /*public void showInternalWebPage() {
         myWebView.loadUrl("file:///android_asset/about.html");
-    }
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +24,9 @@ public class SecondActivity extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
 
-        myWebView = findViewById(R.id.myWebView);
+        //myWebView = findViewById(R.id.myWebView);
 
-        showInternalWebPage();
+        //showInternalWebPage();
         Log.d("secondActivity", "" + extras);
     }
 }

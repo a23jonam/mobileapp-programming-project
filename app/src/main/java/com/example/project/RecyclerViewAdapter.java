@@ -34,12 +34,19 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.title.setText(items.get(position).getTitle());
-        holder.scientificName.setText(items.get(position).getScientificName());
-        holder.orderOfFungi.setText(items.get(position).getOrderOfFungi());
-        holder.culinaryStatus.setText(items.get(position).getCulinaryStatus());
-        holder.heightInCentimeters.setText("Ca "+items.get(position).getHeightInCentimeters()+" cm hög");
-        holder.widthInCentimeters.setText("Ca "+items.get(position).getWidthInCentimeters()+" cm bred");
-        holder.colorPattern.setText(items.get(position).getColorPattern());
+        holder.scientificName.setText(items.get(position).getCreator());
+        holder.orderOfFungi.setText(items.get(position).getDifficulty());
+        holder.culinaryStatus.setText(items.get(position).getType());
+        holder.heightInCentimeters.setText("Upp till "+items.get(position).getMaxNumberOfPlayers()+" spelare");
+        holder.widthInCentimeters.setText("Upp till "+items.get(position).getAmountOfTime()+" minuter");
+
+        /*holder.title.setText(items.get(position).getTitle());
+        holder.scientificName.setText("Administratörer: "+items.get(position).getCreator());
+        holder.widthInCentimeters.setText("Nästa möte om "+items.get(position).getAmountOfTime()+" dag(ar)");
+        holder.orderOfFungi.setText("Spelvärd: "+items.get(position).getDifficulty());
+        holder.culinaryStatus.setText(items.get(position).getType());
+        holder.heightInCentimeters.setText(items.get(position).getMaxNumberOfPlayers()+" medlemmar");*/
+        /*holder.colorPattern.setText(items.get(position).getColorPattern())*/
     }
 
     @Override

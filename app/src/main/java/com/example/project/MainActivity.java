@@ -23,7 +23,8 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener {
 
     private final String JSON_URL = "https://mobprog.webug.se/json-api?login=a23jonam";
-    private final String JSON_FILE = "mushrooms.json";
+    private final String JSON_FILE = "boardgames.json";
+    private final String JSON_FILE2 = "boardgameGroups.json";
 
     private ArrayList<RecyclerViewItem> items;
 
@@ -70,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         due to a firewall, so instead we're using the data from the Json stored in a local file */
         //new JsonTask(this).execute(JSON_URL);
         new JsonFile(this, this).execute(JSON_FILE);
+        //new JsonFile(this, this).execute(JSON_FILE2);
     }
 
     @Override

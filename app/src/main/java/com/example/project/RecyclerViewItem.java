@@ -10,49 +10,49 @@ public class RecyclerViewItem {
     private String title;
 
     @SerializedName("company")
-    private String scientificName;
+    private String creator;
 
     @SerializedName("location")
-    private String orderOfFungi;
+    private String difficulty;
 
     @SerializedName("category")
-    private String culinaryStatus;
+    private String type;
 
     @SerializedName("size")
-    private int heightInCentimeters;
+    private int maxNumberOfPlayers;
 
     @SerializedName("cost")
-    private int widthInCentimeters;
+    private int amountOfTime;
 
-    @SerializedName("auxdata")
-    private String colorPattern;
+    /*@SerializedName("auxdata")
+    private String colorPattern;*/
 
     public String getTitle() {
         return title;
     }
-    public String getScientificName() {
-        return scientificName;
+    public String getCreator() {
+        return creator;
     }
 
-    public String getOrderOfFungi() {
-        return orderOfFungi;
+    public String getDifficulty() {
+        return difficulty;
     }
 
-    public String getCulinaryStatus() {
-        return culinaryStatus;
+    public String getType() {
+        return type;
     }
 
-    public int getHeightInCentimeters() {
-        return heightInCentimeters;
+    public int getMaxNumberOfPlayers() {
+        return maxNumberOfPlayers;
     }
 
-    public int getWidthInCentimeters() {
-        return widthInCentimeters;
+    public int getAmountOfTime() {
+        return amountOfTime;
     }
 
-    public String getColorPattern() {
+    /*public String getColorPattern() {
         return colorPattern;
-    }
+    }*/
 
     public RecyclerViewItem(String title) {
         this.title = title;
@@ -62,12 +62,12 @@ public class RecyclerViewItem {
     public String toString() {
         return "" +
                 "" + title +
-                "\nVetenskapligt namn: " + scientificName +
-                "\nOrdning: " + orderOfFungi +
-                "\n" + culinaryStatus +
-                "\nHöjd i cm: ~" + heightInCentimeters +
-                "\nBredd i cm: ~" + widthInCentimeters +
-                "\nFärg: " + colorPattern;
+                "\nSkapare: " + creator +
+                "\nSvårighetsgrad: " + difficulty +
+                "\nTyp: " + type +
+                "\nMax antal spelare: " + maxNumberOfPlayers +
+                "\nTid: " + amountOfTime;
+                /*"\nFärg: " + colorPattern;*/
     }
 }
 

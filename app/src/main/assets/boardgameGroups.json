@@ -1,0 +1,57 @@
+[
+  {
+    "ID": "a23jonam_21",
+    "name": "German-style enjoyers",
+    "type": "a23jonam",
+    "company": "Hans, Alfred, Eva",
+    "location": "Hans",
+    "category": "Tysk stil",
+    "size": 17,
+    "cost": 1,
+    "auxdata": ""
+  },
+  {
+    "ID": "a23jonam_22",
+    "name": "Strategy intellectuals",
+    "type": "a23jonam",
+    "company": "John, Carl, Rebecka",
+    "location": "Carl",
+    "category": "Strategispel",
+    "size": 32,
+    "cost": 3,
+    "auxdata": ""
+  },
+  {
+    "ID": "a23jonam_23",
+    "name": "Quizzers",
+    "type": "a23jonam",
+    "company": "Lasse, Tuva, Maja",
+    "location": "Maja",
+    "category": "Frågesport",
+    "size": 12,
+    "cost": 2,
+    "auxdata": ""
+  },
+  {
+    "ID": "a23jonam_24",
+    "name": "The Hellfire Club",
+    "type": "a23jonam",
+    "company": "Eddie, Mike, Dustin",
+    "location": "Eddie",
+    "category": "Rollspel",
+    "size": 10,
+    "cost": 6,
+    "auxdata": ""
+  },
+  {
+    "ID": "a23jonam_25",
+    "name": "Word nerds",
+    "type": "a23jonam",
+    "company": "Fia, Maggan, Gunilla",
+    "location": "Gunilla",
+    "category": "Ordspel",
+    "size": 14,
+    "cost": 4,
+    "auxdata": ""
+  }
+]

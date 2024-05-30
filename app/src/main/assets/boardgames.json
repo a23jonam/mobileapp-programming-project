@@ -1,0 +1,112 @@
+[
+  {
+    "ID": "a23jonam_11",
+    "name": "Settlers of Catan",
+    "type": "a23jonam",
+    "company": "Klaus Teuber",
+    "location": "Lätt",
+    "category": "Tysk stil",
+    "size": 4,
+    "cost": 90,
+    "auxdata": ""
+  },
+  {
+    "ID": "a23jonam_12",
+    "name": "Puerto Rico",
+    "type": "a23jonam",
+    "company": "Andreas Seyfarth",
+    "location": "Lätt",
+    "category": "Tysk stil",
+    "size": 5,
+    "cost": 90,
+    "auxdata": ""
+  },
+  {
+    "ID": "a23jonam_13",
+    "name": "Schack",
+    "type": "a23jonam",
+    "company": "Okänt",
+    "location": "Svårt",
+    "category": "Strategispel",
+    "size": 2,
+    "cost": 120,
+    "auxdata": ""
+  },
+  {
+    "ID": "a23jonam_14",
+    "name": "Go",
+    "type": "a23jonam",
+    "company": "Okänt",
+    "location": "Svårt",
+    "category": "Strategispel",
+    "size": 2,
+    "cost": 60,
+    "auxdata": ""
+  },
+  {
+    "ID": "a23jonam_15",
+    "name": "Trivial Pursuit",
+    "type": "a23jonam",
+    "company": "Chris Haney, John Haney, Scott Abbott",
+    "location": "Lätt",
+    "category": "Frågesport",
+    "size": 6,
+    "cost": 120,
+    "auxdata": ""
+  },
+  {
+    "ID": "a23jonam_16",
+    "name": "Bezzerwizzer",
+    "type": "a23jonam",
+    "company": "Asmodee Nordics",
+    "location": "Lätt",
+    "category": "Frågesport",
+    "size": 10,
+    "cost": 60,
+    "auxdata": ""
+  },
+  {
+    "ID": "a23jonam_17",
+    "name": "Dungeons & Dragons",
+    "type": "a23jonam",
+    "company": "Gary Gygax & Dave Arneson",
+    "location": "Medelsvårt",
+    "category": "Rollspel",
+    "size": 5,
+    "cost": 12000,
+    "auxdata": ""
+  },
+  {
+    "ID": "a23jonam_18",
+    "name": "Call of Cthulu",
+    "type": "a23jonam",
+    "company": "Sandy Petersen",
+    "location": "Medelsvårt",
+    "category": "Rollspel",
+    "size": 6,
+    "cost": 12000,
+    "auxdata": ""
+  },
+  {
+    "ID": "a23jonam_19",
+    "name": "Alfapet",
+    "type": "a23jonam",
+    "company": "Alga",
+    "location": "Lätt",
+    "category": "Ordspel",
+    "size": 4,
+    "cost": 60,
+    "auxdata": ""
+  },
+  {
+    "ID": "a23jonam_20",
+    "name": "Scrabble",
+    "type": "a23jonam",
+    "company": "Albert Mosher Butts",
+    "location": "Lätt",
+    "category": "Ordspel",
+    "size": 4,
+    "cost": 60,
+    "auxdata": ""
+  }
+]
