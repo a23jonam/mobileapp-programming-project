@@ -8,6 +8,7 @@
     <TextView
         android:id="@+id/title"
         android:textStyle="bold"
+        android:background="@color/aqua"
         android:textColor="@color/colorPrimary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,6 +17,7 @@
     <TextView
         android:id="@+id/scientificName"
         android:textStyle="italic"
+        android:background="@color/brightBlue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"/>
@@ -23,6 +25,7 @@
     <TextView
         android:id="@+id/orderOfFungi"
         android:textStyle="italic"
+        android:background="@color/babyBlue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="15sp"/>
@@ -30,18 +33,21 @@
     <TextView
         android:id="@+id/culinaryStatus"
         android:textStyle="bold"
+        android:background="@color/blue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="15sp"/>
 
     <TextView
         android:id="@+id/heightInCentimeters"
+        android:background="@color/blueGray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="15sp"/>
 
     <TextView
         android:id="@+id/widthInCentimeters"
+        android:background="@color/blueGreen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="15sp"/>

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.lang.reflect.Array;
@@ -34,16 +35,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.title.setText(items.get(position).getTitle());
-        holder.scientificName.setText(items.get(position).getCreator());
+        holder.scientificName.setText("Skapare: "+items.get(position).getCreator());
         holder.orderOfFungi.setText(items.get(position).getDifficulty());
         holder.culinaryStatus.setText(items.get(position).getType());
         holder.heightInCentimeters.setText("Upp till "+items.get(position).getMaxNumberOfPlayers()+" spelare");
-        holder.widthInCentimeters.setText("Upp till "+items.get(position).getAmountOfTime()+" minuter");
+        holder.widthInCentimeters.setText("Upp till "+items.get(position).getAmountOfTime()+" minuter/omgång");
 
         /*holder.title.setText(items.get(position).getTitle());
         holder.scientificName.setText("Administratörer: "+items.get(position).getCreator());
-        holder.widthInCentimeters.setText("Nästa möte om "+items.get(position).getAmountOfTime()+" dag(ar)");
-        holder.orderOfFungi.setText("Spelvärd: "+items.get(position).getDifficulty());
+        holder.widthInCentimeters.setText("Nästa spelsession om "+items.get(position).getAmountOfTime()+" dag(ar)");
+        holder.orderOfFungi.setText("Hemma hos "+items.get(position).getDifficulty());
         holder.culinaryStatus.setText(items.get(position).getType());
         holder.heightInCentimeters.setText(items.get(position).getMaxNumberOfPlayers()+" medlemmar");*/
         /*holder.colorPattern.setText(items.get(position).getColorPattern())*/
